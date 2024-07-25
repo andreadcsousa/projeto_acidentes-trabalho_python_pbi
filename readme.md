@@ -227,6 +227,4 @@ Acesse o painel online, no link: [Painel CAT](https://app.powerbi.com/view?r=eyJ
 
 <img src="https://raw.githubusercontent.com/andreadcsousa/projeto_acidentes-trabalho_python_pbi/main/imagens/pagina1.jpg" width="100%">
 
-<br>
-
 🔼 [Voltar ao Sumário](#-sumário)
