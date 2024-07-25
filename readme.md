@@ -225,7 +225,7 @@ Para o painel, no Power BI, fiz as páginas por tema. A primeira página mostra 
 
 Acesse o painel online, no link: [Painel CAT](https://app.powerbi.com/view?r=eyJrIjoiYTY4NzVjOGMtODVmZS00NzMzLWFkNTUtMTgwNmJiZTMzYTdmIiwidCI6ImEzZTU3Zjc1LTU5YTktNDFkOS05ZGIwLTA0YmM0ODg2YWY3NyJ9)  e veja uma prévia abaixo:
 
-![Pagina 1]('https://raw.githubusercontent.com/andreadcsousa/projeto_acidentes-trabalho_python_pbi/main/imagens/pagina1.jpg')
+![Pagina 1]("https://raw.githubusercontent.com/andreadcsousa/projeto_acidentes-trabalho_python_pbi/main/imagens/pagina1.jpg")
 
 <br>
 
