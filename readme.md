@@ -51,7 +51,7 @@ Antes de começar, certifique-se de ter o seguinte:
 7. [Git](https://git-scm.com/downloads): Para clonar este repositório;
 8. [Github](https://github.com/): Para criar seu repositório online.
 
-</details><br>
+</details>
 
 Com os pré-requisitos acima atendidos, pode-se prosseguir para as próximas etapas do projeto.
 
@@ -75,6 +75,7 @@ Outros links úteis para dados do CID-10:
 - [Tabnet](http://tabnet.datasus.gov.br/cgi/sih/mxcid10lm.htm) - Lista de tabulação para morbidade
 - [Dr. Jorge Assunção](https://docs.google.com/spreadsheets/d/e/2PACX-1vQG13ojbnTnmoF_UF69QVA5OjOOjB57m-xam6Ac1RhsMkOnsLPCn57xcVqsZ33ZFdP17gD38z7M_m5o/pubhtml) - Tabela no google sheets
 
+> [!IMPORTANT]
 > Os dados da CAT utilizados no projeto são apenas de 2024.  
 > As tabelas do eSocial utilizadas foram: 13, 14, 15 e 17.
 
@@ -106,7 +107,7 @@ Como tem limitação de caracteres nas colunas de texto da CAT, utilizei as dime
 - Parte do corpo atingida (tabela 13 do eSocial)
 - Categorias do CID-10 (tabela com as categorias)
 
-Para isso, exportei as colunas separadamente e, no Excel, alinhei os dados, criando um dicionário posteriormente *(ref. ft_catweb_v2.ipynb)*.
+Para isso, exportei as colunas separadamente e, no Excel, alinhei os dados, criando um dicionário *(ref. ft_catweb_v2.ipynb)*.
 
 #### ***Exemplo 1 - Exportação das colunas:***
 
@@ -204,6 +205,7 @@ Após concluir o tratamento, comecei a busca pelas dimensões e adaptei elas ape
 - **dim_mun** - relação dos estados e municípios do Brasil;
 - **dim_cid** - tabela de morbidade no nível de categoria;
 
+> [!TIP]
 > A pasta **arquivos** tem as tabelas do eSocial compiladas em único aquivo, bem como, as tabelas exportadas no primeiro tratamento para ajustes realizados no segundo tratamento, a seguir.
 
 ### ✏️ Segundo tratamento
@@ -214,89 +216,16 @@ O trabalho foi minuncioso e contou com apoio de tabelas do eSocial. Foi realizad
 
 Isso porque os códigos das tabelas do eSocial não constam nos dados da CAT para aplicar um relacionamento direto.
 
+> [!NOTE]
 > Além disso, optei por substituir a coluna com a data de nascimento do acidentado pela idade, calculando a idade na data do acidente.
 
 ### 💡 Criando visualizações
 
 Para o painel, no Power BI, fiz as páginas por tema. A primeira página mostra uma visão geral das Comunicações de Acidentes de Trabalho; a segunda possui dados relacionados ao acidentado; a última conta com as causas das lesões sofridas.
 
-Acesse o painel online, no link: [Painel CAT](https://app.powerbi.com/view?r=eyJrIjoiYTY4NzVjOGMtODVmZS00NzMzLWFkNTUtMTgwNmJiZTMzYTdmIiwidCI6ImEzZTU3Zjc1LTU5YTktNDFkOS05ZGIwLTA0YmM0ODg2YWY3NyJ9) ou utilize-o abaixo.
+Acesse o painel online, no link: [Painel CAT](https://app.powerbi.com/view?r=eyJrIjoiYTY4NzVjOGMtODVmZS00NzMzLWFkNTUtMTgwNmJiZTMzYTdmIiwidCI6ImEzZTU3Zjc1LTU5YTktNDFkOS05ZGIwLTA0YmM0ODg2YWY3NyJ9)  e veja uma prévia abaixo:
 
-<iframe title="painel_acidentes_trabalho" width="100%" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYTY4NzVjOGMtODVmZS00NzMzLWFkNTUtMTgwNmJiZTMzYTdmIiwidCI6ImEzZTU3Zjc1LTU5YTktNDFkOS05ZGIwLTA0YmM0ODg2YWY3NyJ9" frameborder="0" allowFullScreen="true"></iframe>
-
-prefere o bi incorporado ou um slide com imagens dele?
-
-<div class="slideshow-container">
-
-  <div class="mySlides fade">
-    <img src="./imagens/pagina1.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides fade">
-    <img src="./imagens/pagina2.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides fade">
-    <img src="./imagens/pagina3.jpg" style="width:100%">
-  </div>
-
-</div>
-
-<style>
-    .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-    }
-
-    .mySlides {
-        display: none;
-    }
-
-    img {
-        vertical-align: middle;
-    }
-
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-
-    @-webkit-keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-</style>
-
-<script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        slideIndex++;
-
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
-
-        slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 5000);
-    }
-</script>
+![Pagina 1]('https://github.com/andreadcsousa/projeto_acidentes-trabalho_python_pbi/imagens/pagina1.jpg')
 
 <br>
 
